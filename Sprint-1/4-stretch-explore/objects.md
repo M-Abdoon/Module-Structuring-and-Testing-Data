@@ -20,4 +20,4 @@ Console stores several functions inside it, functions like log(), assert(), debu
 
 What does the syntax `console.log` or `console.assert` mean? In particular, what does the `.` mean?
 `console.log` means that we want to use the function log() that is inside the object (native object) `console`. the dot . means is like navigating from the object to the function inside that object.
-so `console.log` means "use the object `console`, then from the functions inside the object use log()".
+so `console.log` means "use the object `console`, then from the functions inside the object use log()". 
