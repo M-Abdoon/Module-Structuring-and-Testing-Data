@@ -1,5 +1,5 @@
-const minimum = 1000;
-const maximum = 9999;
+const minimum = 1;
+const maximum = 100;
 
 num = Math.floor(Math.random() * (maximum - minimum) + 1);
 
