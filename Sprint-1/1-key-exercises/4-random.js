@@ -3,7 +3,7 @@ const maximum = 9999;
 
 num = Math.floor(Math.random() * (maximum - minimum) + 1);
 
-console.log(num);
+//console.log(num);
 
 // In this exercise, you will need to work out what num represents?
 // Try breaking down the expression and using documentation to explain what it means
