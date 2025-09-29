@@ -16,6 +16,7 @@ num = Math.floor(Math.random() * (maximum - minimum) + 1);
 // between 1 and 100. Math.random() generates a random decimal number between 0 and 1 (exclusive).
 // then it multiplies this random number by (maximum - minimum) to scales it to a range between 0 and 99 (since maximum is 100 and minimum is 1).
 // Adding 1 shifts this range to be between 1 and 100.
+// the line had a mistake, it was declared as const num = ... but I changed it to num = ... because const means unchangeable, and here we want to change its value each time we run the code.
 // Math.floor() then rounds down the result number to the nearest whole number, and ensures that num is an integer between 1 and 100.
 
 // So the whole code generates a random integer between 1 and 100 (inclusive) and stores it in the variable num.
