@@ -7,7 +7,7 @@
 
 // call the function capitalise with a string input
 // interpret the error message and figure out why an error is occurring
-@@ -10,4 +14,14 @@ function capitalise(str) {
+function capitalise(str) {
 }
 
 // =============> write your explanation here
