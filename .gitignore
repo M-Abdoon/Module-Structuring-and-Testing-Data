@@ -2,5 +2,4 @@ node_modules
 .DS_Store
 .vscode
 testing.js --- IGNORE ---
-testing.js
 **/.DS_Store

@@ -14,3 +14,20 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+function toUpperSnakeCase(string)
+{
+    let output = '';
+    for(let i = 0; i < string.length; i++)
+    {
+        let char = string[i];
+        if(char === " ")
+        {
+            char = "_";
+        }
+        output += char;
+    }
+    return output.toUpperCase();
+}
+
+console.log(toUpperSnakeCase("Hello there, How are you doing guys?"));
