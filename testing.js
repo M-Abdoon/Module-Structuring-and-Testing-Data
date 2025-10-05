@@ -1,36 +1,23 @@
-// Predict and explain first...
-// the code is supposed to convert a decimal number to percentage by multiplying 
-// the decimal Number by 100 then add the sign % to show that it is a percentage
-
-// Why will an error occur when this program runs?
-// =============> write your prediction here
-// an error will occur because the variable decimalNumber is redeclared inside the function.
-// it's already declared as a parameter of the function, so redeclaring it with const causes a syntax error.
-
-// Try playing computer with the example to work out what is going on
-
-function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
-
-  return percentage;
+function formatAs12HourClock(time) {
+  if (Number(time.slice(0, 2)) > 12)
+  {
+    return `${Number(time.slice(0, 2) - 12)}:00 pm`;
+  }
+  return `${time} am`;
 }
 
-console.log(decimalNumber);
+let targetOutPut = "2:00 pm";
+let currentOutPut= formatAs12HourClock("14:00");
 
-// =============> write your explanation here
-// the fucntion convertToPercentage has a parameter named decimalNumber,
-// but inside the function, there is a line that tries to declare a new constant with the same name decimalNumber.
-// there is no need to redeclare the variable or edit it since it is a user input.
-// also the variable decimalNumber is called from outside the function which menas from another scope.
-// that is wrong because the variable can only be used inside the fucntion. instead of that we need to call the funtion, not hte variable.
+console.assert(
+  targetOutPut === currentOutPut,
+  `current output: ${currentOutPut}, target output: ${targetOutPut}`
+);
+// =========
+targetOutPut = "11:00 am";
+currentOutPut= formatAs12HourClock("11:00");
 
-// Finally, correct the code to fix the problem
-// =============> write your new code here
-
-function convertToPercentage(decimalNumber) {
-  const percentage = `${decimalNumber * 100}%`;
-  return percentage;
-}
-
-console.log(convertToPercentage(0.3));
+console.assert(
+  currentOutPut === targetOutPut,
+  `Error,, current is ${currentOutPut} and target is ${targetOutPut}`
+);
