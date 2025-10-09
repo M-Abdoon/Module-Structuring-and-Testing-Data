@@ -70,8 +70,8 @@ assertEquals(equalFraction, false);
 const tryZero = isProperFraction(-10, 0);
 assertEquals(tryZero, true);
 
-// check if inputs are proper numbers:
+// check if inputs are proper numbers
 // Input: numerator = "hello", denominator = 4 (any number)
-//target output: string
+//target output: string "[ wrong input ]"
 const tryString = isProperFraction("hello", 4);
 assertEquals(tryString, "[ wrong input ]");
