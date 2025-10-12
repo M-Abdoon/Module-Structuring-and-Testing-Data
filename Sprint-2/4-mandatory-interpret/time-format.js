@@ -30,7 +30,7 @@ console.log(formatTimeDisplay(61));
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
 // # The Python visualizer stops working when it runs pad because (padStart is not a function), maybe because it uses ES6 version of javascript!
-// The return value of pad when it's called for the first time is 00
+// The return value of pad when it's called for the first time is String "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
