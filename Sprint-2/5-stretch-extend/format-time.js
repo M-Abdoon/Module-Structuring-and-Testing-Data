@@ -13,7 +13,7 @@ function formatAs12HourClock(time) {
   } else {
     timeIndicator = "am";
   }
-  if ( hours === 00)
+  if ( hours === 0)
     hours = 12;
 
   return `${String(hours).padStart(2, "0")}:${minutes} ${timeIndicator}`;
