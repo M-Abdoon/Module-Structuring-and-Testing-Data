@@ -3,21 +3,20 @@
 // Your task is to write tests for as many different groups of input data or edge cases as you can, and fix any bugs you find.
 
 function formatAs12HourClock(time) {
-  let hours = time.slice(0, 2);
+  let hours = Number(time.slice(0, 2));
   let minutes= time.slice(3, 5);
   let timeIndicator;
 
-  if (Number(hours) >= 12) {
-    hours = String(hours - 12);
-    hours = hours.padStart(2, "0");
+  if (hours >= 12) {
+    hours = hours - 12;
     timeIndicator = "pm";
   } else {
     timeIndicator = "am";
   }
-  if ( hours === "00")
-    hours = "12";
+  if ( hours === 00)
+    hours = 12;
 
-  return `${hours}:${minutes} ${timeIndicator}`;
+  return `${String(hours).padStart(2, "0")}:${minutes} ${timeIndicator}`;
 }
 
 let currentOutput = formatAs12HourClock("14:00");
