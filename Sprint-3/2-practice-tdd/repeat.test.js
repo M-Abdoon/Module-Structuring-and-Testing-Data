@@ -46,5 +46,5 @@ test("should repeat the string 0 times ( means the output will be an empty strin
   const str = "hello";
   const count = -3;
   const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual("Error: Negative counts are not valid.");
+  expect(repeatedStr).toEqual(false);
 });
