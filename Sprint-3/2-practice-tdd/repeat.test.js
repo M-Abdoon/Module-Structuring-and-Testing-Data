@@ -42,9 +42,17 @@ test("should repeat the string 0 times ( means the output will be an empty strin
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
-test("should repeat the string 0 times ( means the output will be an empty string)", () => {
+test("should throw an error if count is not a valid number", () => {
   const str = "hello";
-  const count = -3;
-  const repeatedStr = repeat(str, count);
-  expect(repeatedStr).toEqual(false);
+  const count = -8;
+  expect(() => repeat(str, count)).toThrow("Count must be a valid number");
 });
+
+test("should throw an error if count is not a valid number", () => {
+  const str = "hello";
+  const count = "abc";
+  expect(() => repeat(str, count)).toThrow("Count must be a valid number");
+});
+
+
+

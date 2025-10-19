@@ -1,6 +1,6 @@
 function repeat(str, count) {
-  if(count < 0) {
-    return false;
+  if (typeof count !== "number" || isNaN(count) || count < 0) {
+    throw new Error("Count must be a valid number");
   }
   return str.repeat(count);
 }
