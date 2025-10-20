@@ -1,6 +1,6 @@
 function getOrdinalNumber(num) {
-  if (typeof num !== "number" || num <= 0) {
-    return "Input must be a positive integer.";
+  if (!Number.isInteger(num) || num <= 0) {
+    throw new Error("Input must be a positive integer.");
   }
   
   const lastTwoDigits = num % 100;
@@ -23,5 +23,5 @@ function getOrdinalNumber(num) {
   return num;  
 }
 
-console.log(getOrdinalNumber(21));    // "1st"
+//console.log(getOrdinalNumber(21));    // "1st"
 module.exports = getOrdinalNumber;

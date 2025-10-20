@@ -61,3 +61,19 @@ test("should return correct ordinal suffixes for big numbers", () => {
     expect( getOrdinalNumber(10003) ).toEqual("10003rd");
     expect( getOrdinalNumber(10012) ).toEqual("10012th");
 });
+
+
+// Case 6: dealing with invalid inputs
+// test("should return error message", () => {
+//     expect( getOrdinalNumber(NaN) ).toEqual("Input must be a positive integer.");
+//     expect( getOrdinalNumber(Infinity) ).toEqual("Input must be a positive integer.");
+//     expect( getOrdinalNumber("hello") ).toEqual("Input must be a positive integer.");
+//     expect( getOrdinalNumber([0, 3]) ).toEqual("Input must be a positive integer.");
+// });
+
+test("should throw an error stating that input must be a positive integer", () => {
+    expect(() => getOrdinalNumber(NaN)).toThrow("Input must be a positive integer.");
+    expect(() => getOrdinalNumber(Infinity)).toThrow("Input must be a positive integer.");
+    expect(() => getOrdinalNumber("hello")).toThrow("Input must be a positive integer.");
+    expect(() => getOrdinalNumber([0, 1, 2])).toThrow("Input must be a positive integer.");
+});
