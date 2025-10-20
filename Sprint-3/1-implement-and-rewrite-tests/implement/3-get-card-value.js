@@ -15,8 +15,11 @@ function getCardValue(card) {
   if (rank === "J" || rank === "Q"|| rank === "K") {
     return 10;
   }
+
+  rank = Number(Math.floor(rank));
+  
   if ((rank => 2) && (rank <= 10)) {
-    return Number(rank);
+    return rank;
   }
   return "Invalid card rank.";
 }
@@ -70,3 +73,15 @@ assertEquals(ace, 11);
 // Then it should throw an error indicating "Invalid card rank."
 const invalidCards = getCardValue("hello");
 assertEquals(invalidCards, "Invalid card rank.");
+
+// strings that represent valid numeric literals
+const numericLiterals1 = getCardValue("hello");
+assertEquals(numericLiterals1, "Invalid card rank.");
+
+const numericLiterals2 = getCardValue("hello");
+assertEquals(numericLiterals2, "Invalid card rank.");
+
+
+// console.log(getCardValue("0x02♠"));  // 2
+// console.log(getCardValue("2.1♠"));   // 2
+// console.log(getCardValue("0002♠"));  // 2
