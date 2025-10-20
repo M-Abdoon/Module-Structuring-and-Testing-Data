@@ -21,11 +21,9 @@ test("Numbers that end with `nd`", () => {
   expect(getOrdinalNumber(32)).toEqual("32nd");
   expect(getOrdinalNumber(202)).toEqual("202nd");
   expect(getOrdinalNumber(4502)).toEqual("4502nd");
-}
+});
 
 // Case 3:: "Numbers that end with `rd`
-);
-
 test("Numbers that end with `rd`", () => {
   expect(getOrdinalNumber(3)).toEqual("3rd");
   expect(getOrdinalNumber(43)).toEqual("43rd");
@@ -53,7 +51,6 @@ test("Numbers that are exceptions (11, 12, 13)", () => {
 });
 
 // Case 6: "Non-positive integers (NaN, Infinity, non-integers)
-
 test("should throw an error stating that input must be a positive integer", () => {
     expect(() => getOrdinalNumber(NaN)).toThrow("Input must be a positive integer.");
     expect(() => getOrdinalNumber(Infinity)).toThrow("Input must be a positive integer.");
