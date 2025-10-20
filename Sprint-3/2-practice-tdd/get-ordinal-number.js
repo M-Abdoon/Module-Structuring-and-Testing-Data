@@ -1,5 +1,5 @@
 function getOrdinalNumber(num) {
-  if (typeof num !== "number") {
+  if (typeof num !== "number" && num <= 0) {
     return "Input must be a positive integer.";
   }
   
