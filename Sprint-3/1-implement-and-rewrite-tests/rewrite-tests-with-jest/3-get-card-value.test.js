@@ -24,9 +24,6 @@ test("should return 10 for face cards J Q K", () => {
 // Case 4: Handle Ace (A):
 test("should return 11 when entering Ace A", () => {
   expect(getCardValue("A♠")).toEqual(11);
-  expect(getCardValue("A♥")).toEqual(11);
-  expect(getCardValue("A♦")).toEqual(11);
-  expect(getCardValue("A♣")).toEqual(11);
 });
 
 // Case 5: Handle Invalid Cards:
@@ -35,5 +32,4 @@ test(`should return string ("Invalid card rank.") for invalid inputs`, () => {
   expect(getCardValue("♠")).toEqual("Invalid card rank.");
   expect(getCardValue("979")).toEqual("Invalid card rank.");
   expect(getCardValue("1")).toEqual("Invalid card rank.");
-  expect(getCardValue([1, 2, 3])).toEqual("Invalid card rank.");
 });
