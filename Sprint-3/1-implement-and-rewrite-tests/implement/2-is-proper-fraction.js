@@ -44,7 +44,7 @@ const improperFraction = isProperFraction(5, 2);
 assertEquals(improperFraction, false);
 
 // Negative Fraction check:
-// Input: numerator = -4, denominator = 7 098*&7&&*
+// Input: numerator = -4, denominator = 7
 // target output: true
 // Explanation: The fraction -4/7 is a proper fraction because the absolute value of the numerator (4) is less than the denominator (7). The function should return true.
 const negativeFraction = isProperFraction(-4, 7);
