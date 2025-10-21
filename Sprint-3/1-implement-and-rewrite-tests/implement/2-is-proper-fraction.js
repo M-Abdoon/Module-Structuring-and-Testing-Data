@@ -8,7 +8,7 @@
 // write one test at a time, and make it pass, build your solution up methodically
 
 function isProperFraction(numerator, denominator) {
-  if(typeof(numerator) != "number" || typeof(denominator) != "number") {
+  if(!Number.isInteger(numerator) || !Number.isInteger(denominator)) {
     throw new Error("[ wrong input ]");
   }
   
