@@ -18,7 +18,7 @@ function getCardValue(card) {
 
   rank = Number(Math.floor(rank));
   
-  if ((rank => 2) && (rank <= 10)) {
+  if ((rank >= 2) && (rank <= 10)) {
     return rank;
   }
   return "Invalid card rank.";
