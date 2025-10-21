@@ -16,15 +16,18 @@ function getCardValue(card) {
     return 10;
   }
 
-  rank = Number(Math.floor(rank));
+  if(!Number.isInteger(Number(rank) ) || /^0x/i.test(rank)) {
+    return "Invalid card rank.";
+  }
   
+  rank = Number(rank);
   if ((rank >= 2) && (rank <= 10)) {
     return rank;
   }
   return "Invalid card rank.";
 }
 
-console.log(getCardValue(6));  // 11
+console.log(getCardValue("0x00002♠"));
 // The line below allows us to load the getCardValue function into tests in other files.
 // This will be useful in the "rewrite tests with jest" step.
 module.exports = getCardValue;
